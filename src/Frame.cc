@@ -349,9 +349,10 @@ Frame::Frame(const cv::Mat &imGray, const double &timeStamp, ORBextractor* extra
         return;
 
     // Step 4 用OpenCV的矫正函数、内参对提取到的特征点进行矫正 
-    //? 需要确定的：是对特征点矫正还是整张图像矫正的？
+    //? 需要确定的：是对特征点矫正还是整张图像矫正的？ 
     //代码呈现的是对特征点矫正
     //? 特征点最终呈现的是描述子，描述子仍包含坐标信息？？
+   //该部分需要查看输出描述子时其包含的信息
     UndistortKeyPoints();
 
     // Set no stereo information
